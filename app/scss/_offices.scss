@@ -1,0 +1,177 @@
+.offices {
+  padding: 0 0 120px 0;
+
+  @include media($md23) {
+    padding: 0 0 80px 0;
+  }
+
+  &__list {
+    max-width: 1550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    @include media($md21) {
+      max-width: 1110px;
+    }
+
+    @include media($md22) {
+      max-width: 878px;
+      row-gap: 40px;
+    }
+
+    @include media($md23) {
+      max-width: 678px;
+    }
+
+    @include media($md25) {
+      max-width: 347px;
+    }
+
+    @include media($md25) {
+      row-gap: 24px;
+    }
+  }
+
+  &__item {
+    max-width: 47%;
+    min-width: 325px;
+    margin: 0 15px;
+
+    &:nth-child(1) {
+      @include media($md21) {
+        min-height: 537px;
+      }
+
+      @include media($md22) {
+        min-width: 100%;
+        min-height: auto;
+        padding: 0 14px;
+      }
+
+      @include media($md25) {
+        padding: 0 10px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @include media($md21) {
+      min-height: 487px;
+    }
+
+    @include media($md22) {
+      min-width: 196px;
+      max-width: 30%;
+      min-height: auto;
+      margin: 0 14px;
+    }
+
+    @include media($md23) {
+      max-width: 27%;
+    }
+
+    @include media($md24) {
+      max-width: 100%;
+      padding: 0 10px;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 60px;
+
+    @include media($md21) {
+      max-width: 320px;
+      font-size: 50px;
+    }
+
+    @include media($md21) {
+      max-width: 100%;
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
+
+    @include media($md25) {
+      margin-bottom: 32px;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+
+    @include media($md21) {
+      font-size: 18px;
+    }
+
+    @include media($md22) {
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 40px;
+
+      @include media($md22) {
+        margin-bottom: 32px;
+      }
+
+      @include media($md25) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 19px 40px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    border: 2px solid $black;
+    border-radius: 100px;
+
+    @include media($md21) {
+      font-size: 15px;
+    }
+
+    @include media($md22) {
+      padding: 16px 30px;
+      font-size: 14px;
+    }
+
+    @include media($md25) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    object-fit: scale-down;
+    max-width: 100%;
+
+    @include media($md21) {
+      max-height: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media($md22) {
+      height: 191px;
+    }
+
+    @include media($md23) {
+      height: 141px;
+    }
+
+    @include media($md24) {
+      height: 234px;
+    }
+  }
+}

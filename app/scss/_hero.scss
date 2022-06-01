@@ -1,0 +1,455 @@
+.hero {
+  margin-top: 155px;
+  overflow: hidden;
+
+
+  @include media($md21) {
+    margin-top: 150px;
+  }
+
+  @include media($md22) {
+    margin-top: 142px;
+  }
+
+  @include media($md23) {
+    margin-top: 135px;
+  }
+
+  @include media($md24) {
+    margin-top: 80px;
+  }
+
+  @include media($md25) {
+    margin-top: 87px;
+  }
+
+  &__img-box {
+    width: 100%;
+    max-width: 809px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @include media($md21) {
+      max-width: 527px;
+    }
+
+    @include media($md22) {
+      flex-shrink: 1;
+      max-width: 390px;
+    }
+
+    @include media($md23) {
+      max-width: 369px;
+    }
+
+    @include media($md25) {
+      max-width: 156px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: end;
+    align-items: stretch;
+    align-content: stretch;
+    position: relative;
+  }
+
+  &__content {
+    max-width: 836px;
+    margin-right: 84px;
+    padding: 120px 10px 140px 10px;
+    flex-shrink: 0;
+
+    @include media($md20) {
+      margin-right: 8px;
+    }
+
+    @include media($md21) {
+      margin-right: 8px;
+      max-width: 699px;
+      padding: 80px 10px 120px 10px;
+    }
+
+    @include media($md22) {
+      max-width: 556px;
+      margin-right: 0;
+      padding: 80px 10px 80px 10px;
+      flex-shrink: 1;
+    }
+
+    @include media($md23) {
+      max-width: 351px;
+      padding: 80px 10px 85px 10px;
+    }
+
+    @include media($md25) {
+      max-width: 200px;
+      margin-right: 6px;
+      padding: 60px 10px 0 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 80px;
+    letter-spacing: 2px;
+    line-height: 1;
+    font-weight: 800;
+
+    @include media($md21) {
+      font-size: 70px;
+    }
+
+    @include media($md22) {
+      max-width: 331px;
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+
+    @include media($md24) {
+      font-size: 26px;
+    }
+
+    @include media($md25) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    max-width: 673px;
+    font-size: 26px;
+    line-height: 1.2;
+
+    @include media($md21) {
+      font-size: 20px;
+    }
+
+    @include media($md22) {
+      font-size: 16px;
+      margin-bottom: 37px;
+    }
+
+    @include media($md23) {
+      margin-bottom: 40px;
+    }
+
+    @include media($md25) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__add-text {
+    @include media($md23) {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 24px 70px 24px 82px;
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    background: linear-gradient(270deg, #FFCC00 0%, #FFA300 100%);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: $white;
+
+    @include media($md21) {
+      padding: 20px 25px 18px 60px;
+    }
+
+    @include media($md22) {
+      margin-bottom: 32px;
+      font-size: 14px;
+      padding: 16px 38px 18px 50px;
+    }
+
+    @include media($md24) {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &::after {
+      left: 58px;
+      width: 9px;
+      height: 17px;
+      background-image: url("../images/icons/arrow-right.svg");
+
+      @include media($md21) {
+        left: 42px;
+      }
+
+      @include media($md22) {
+        left: 28px;
+        width: 7px;
+        height: 15px;
+      }
+    }
+
+    &::before {
+      left: 75px;
+      top: -6px;
+      width: 43px;
+      height: 9px;
+      background-image: url("../images/icons/orange-arrow-top.svg");
+      background-position: 0 0;
+
+      @include media($md22) {
+        left: 46px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    @include media($md21) {
+      row-gap: 35px;
+    }
+
+    @include media($md22) {
+      row-gap: 30px;
+    }
+
+    @include media($md24) {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 394px;
+    width: 100%;
+    min-height: 70px;
+    padding-left: 90px;
+
+    display: flex;
+    align-items: center;
+
+    @include media($md21) {
+      font-size: 18px;
+      max-width: 329px;
+    }
+
+    @include media($md22) {
+      max-width: 260px;
+      min-height: 50px;
+      padding-left: 66px;
+      font-size: 14px;
+    }
+
+    @include media($md23) {
+      max-width: 287px;
+      padding-left: 75px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 70px;
+      height: 70px;
+      background-image: url("../images/icons/fix.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 37px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px -6px rgba(35, 25, 4, 0.15);
+
+      @include media($md22) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__item--fix {
+
+    &::after {
+      background-image: url("../images/icons/fix.svg");
+    }
+  }
+
+  &__item--warranty {
+    &::after {
+      background-image: url("../images/icons/warranty.png");
+    }
+  }
+
+  &__item--bonus {
+    &::after {
+      background-image: url("../images/icons/bonus-icon.svg");
+    }
+  }
+
+  &__item--checking {
+    &::after {
+      background-image: url("../images/icons/checking.png");
+    }
+  }
+
+  &__modal {
+    display: flex;
+    max-width: 464px;
+    height: 100px;
+    padding: 20px 40px;
+    background-color: $white;
+    border-radius: 100px;
+    margin-left: 76px;
+    margin-bottom: 103px;
+
+    @include media($md20) {
+      margin-left: 22px;
+    }
+
+    @include media($md21) {
+      margin-bottom: 200px;
+      margin-left: -15px;
+    }
+
+    @include media($md215) {
+      padding: 10px 22px;
+      max-width: 298px;
+      height: 61px;
+    }
+
+    @include media($md22) {
+      margin-bottom: 121px;
+      margin-left: -20px;
+    }
+
+    @include media($md23) {
+      margin-bottom: 113px;
+      margin-left: -74px;
+    }
+
+    @include media($md24) {
+      display: none;
+    }
+  }
+
+  &__number {
+    font-family: 'Proxima Nova', sans-serif;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    background: linear-gradient(270deg, #FFCC00 0%, #FFA300 100%), linear-gradient(0deg, #FFA300, #FFA300), linear-gradient(0deg, #4BB1BC, #4BB1BC), linear-gradient(0deg, #1767F9, #1767F9), #4633B9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+
+    @include media($md215) {
+      font-size: 28px;
+    }
+  }
+
+
+  &__smile {
+    flex-shrink: 0;
+
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @include media($md215) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__achievement {
+    flex-shrink: 0;
+
+    max-width: 151px;
+
+    @include media($md215) {
+      font-size: 14px;
+    }
+  }
+
+
+  &__bottom {
+    .hero {
+      &__button {
+        display: none;
+
+        @include media($md24) {
+          display: flex;
+          margin-top: 32px;
+          margin: 32px auto 24px;
+          padding: 15px 50px 18px 71px;
+
+          &::after {
+            left: 46px;
+          }
+        }
+      }
+
+      &__list {
+        display: none;
+
+        @include media($md24) {
+          display: flex;
+          justify-content: center;
+          row-gap: 24px;
+          padding: 0 15px;
+          margin-bottom: 24px;
+        }
+      }
+
+      &__item {
+        display: none;
+
+        @include media($md24) {
+          display: block;
+          width: 154px;
+          margin: 0 8px;
+          padding: 66px 0 0 0;
+          text-align: center;
+
+          &::after {
+            left: 50px;
+          }
+        }
+      }
+
+      &__modal {
+        display: none;
+
+        @include media($md24) {
+          display: flex;
+          max-width: 327px;
+          box-shadow: 0px 10px 30px -6px rgba(35, 25, 4, 0.15);
+          margin: 0 auto 64px auto;
+          padding: 12px 37px 9px 37px;
+        }
+      }
+    }
+  }
+}
